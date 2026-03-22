@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- FIX 4c: Content-Security-Policy — prevents XSS payloads from loading external
+     scripts or exfiltrating localStorage data to third-party origins.
+     'unsafe-inline' on style-src is required for the inline <style> block and
+     dynamically injected style attributes used throughout the app. -->
+<meta http-equiv="Content-Security-Policy"
+  content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self';">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="KharchaBook">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0E1520">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="icon-512.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- FIX: Consolidated 3 @import rules into a single non-blocking <link> tag.
+     @import inside <style> is render-blocking; <link rel="stylesheet"> is not. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Sora:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap">
+<title>KharchaBook — Your Financial Control Center</title>
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   KharchaBook — Premium Design System v3
+   "Quiet Luxury" — A refined, minimal fintech aesthetic
+   Inspired by Linear, Stripe, and Apple Wallet
+   ═══════════════════════════════════════════════════════════════ */
+
+/$ ── DESIGN TOKENS ──────────────────────────────────────────────────────────────────── */
+:root {
+  /* Surfaces */
+$��
